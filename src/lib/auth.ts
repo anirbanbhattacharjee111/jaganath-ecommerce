@@ -1,8 +1,8 @@
-import { getServerSession } from 'next-auth';
+import { PrismaAdapter } from '@next-auth/prisma-adapter';
+import { PrismaClient } from '@prisma/client';
 import type { NextAuthOptions } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
-import { PrismaAdapter } from '@auth/prisma-adapter';
-import { PrismaClient } from '@prisma/client';
+import { getServerSession } from 'next-auth';
 import bcrypt from 'bcryptjs';
 
 const prisma = new PrismaClient();
